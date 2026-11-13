@@ -1,0 +1,25 @@
+{
+	"name": "@napi-tokio/native",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Rust addon for the showcase: napi-rs with the tokio_rt feature",
+	"type": "module",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"default": "./index.js"
+		}
+	},
+	"napi": {
+		"binaryName": "tokio-native"
+	},
+	"scripts": {
+		"build": "napi build --platform --release --esm",
+		"build:debug": "napi build --platform --esm"
+	},
+	"devDependencies": {
+		"@napi-rs/cli": "^3.10.12"
+	}
+}
